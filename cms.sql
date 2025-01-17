@@ -41,9 +41,9 @@ CREATE TABLE `admin` (
 --
 -- Dumping data for table `admin`
 --
-
+--need to be changed 
 INSERT INTO `admin` (`id`, `fullname`, `mobilenumber`, `email`, `username`, `password`, `creationDate`, `updationDate`) VALUES
-(1, 'admin', 8956232356, 'admin@gmail.com', 'admin', '202cb962ac59075b964b07152d234b70', '2023-09-12 05:16:16', '18-10-2016 04:18:16');
+(1, 'gilbert', 0709242703, 'gilbert@gmail.com', 'Gilbert@2022', '202cb962ac59075b964b07152d234b70', '2024-12-25 05:16:16', '18-10-2016 04:18:16');
 
 -- --------------------------------------------------------
 
@@ -62,7 +62,8 @@ CREATE TABLE `category` (
 --
 -- Dumping data for table `category`
 --
-
+-- d
+-- need to be changed
 INSERT INTO `category` (`id`, `categoryName`, `categoryDescription`, `creationDate`, `updationDate`) VALUES
 (1, 'E-commerce', 'E-commerce', '2023-08-28 07:10:55', '2023-09-14 07:10:30'),
 (2, 'general', 'dsdas', '2023-08-11 10:54:06', '2023-09-14 07:10:46'),
@@ -95,28 +96,61 @@ INSERT INTO `complaintremark` (`id`, `complaintNumber`, `status`, `remark`, `rem
 -- --------------------------------------------------------
 
 --
--- Table structure for table `state`
+-- Table structure for table `departments`
 --
 
-CREATE TABLE `state` (
-  `id` int(11) NOT NULL,
-  `stateName` varchar(255) DEFAULT NULL,
-  `stateDescription` tinytext DEFAULT NULL,
-  `postingDate` timestamp NULL DEFAULT current_timestamp(),
-  `updationDate` timestamp NULL DEFAULT NULL ON UPDATE current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+CREATE TABLE `departments` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `departmentName` varchar(255) NOT NULL,
+  `facultyName` varchar(255) NOT NULL,
+  `departmentDescription` text,
+  `postingDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updationDate` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+);
+
 
 --
--- Dumping data for table `state`
+-- Dumping data for table ``departments
 --
+INSERT INTO `departments` (`departmentName`, `facultyName`, `departmentDescription`, `postingDate`, `updationDate`) VALUES
+('Accounting', 'Faculty of Commerce', 'The department of accounting focuses on financial reporting, auditing, and taxation.', NOW(), NULL),
+('Marketing', 'Faculty of Commerce', 'The marketing department handles market research, product development, and advertising strategies.', NOW(), NULL),
+('Human Resource Management', 'Faculty of Management', 'Focuses on employee recruitment, training, performance management, and labor relations.', NOW(), NULL),
+('Business Computing', 'Faculty of Computing and Management Science', 'This department offers courses on computing, programming, and information systems for business.', NOW(), NULL),
+('Entrepreneurship', 'Faculty of Management', 'Provides training in business development, innovation, and venture creation.', NOW(), NULL),
+('Procurement and Logistics Management', 'Faculty of Management', 'Focuses on supply chain management, procurement strategies, and logistics.', NOW(), NULL),
+('Public Administration', 'Faculty of Public Administration', 'Courses in governance, policy-making, and public service administration are taught here.', NOW(), NULL),
+('Tourism and Hospitality', 'Faculty of Service Industry', 'Offers programs in tourism management, hospitality services, and event management.', NOW(), NULL),
+('Finance', 'Faculty of Commerce', 'The finance department teaches financial management, investment, and banking.', NOW(), NULL),
+('Economics', 'Faculty of Economics', 'Focuses on economic theory, applied economics, and public policy analysis.', NOW(), NULL);
 
-INSERT INTO `state` (`id`, `stateName`, `stateDescription`, `postingDate`, `updationDate`) VALUES
-(3, 'Uttar Pradesh', 'Uttar Pradesh-UP', '2016-10-18 11:35:02', '2023-09-28 16:56:56'),
-(4, 'Punjab', 'Punjab-PB', '2016-10-18 11:35:58', '2023-09-28 16:56:28'),
-(5, 'Haryana', 'Haryana-HR', '2017-03-28 07:20:36', '2023-09-28 16:56:38'),
-(6, 'Delhi', 'Delhi-DL', '2017-06-11 10:54:12', '2023-09-28 16:56:18');
+
+
+
 
 -- --------------------------------------------------------
+
+--
+-- Table structure for table `faculties`
+--
+
+CREATE TABLE `faculties` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `facultyName` varchar(255) NOT NULL,
+  `facultyDescription` text DEFAULT NULL,
+  `creationDate` timestamp NOT NULL DEFAULT current_timestamp(),
+  `updationDate` timestamp NULL DEFAULT NULL ON UPDATE current_timestamp(),
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+-- Dumping data for table `faculties`
+INSERT INTO `faculties` (`facultyName`, `facultyDescription`, `creationDate`, `updationDate`) VALUES
+('Faculty of Commerce', 'This faculty focuses on business-related programs including Accounting, Marketing, and Finance.', NOW(), NULL),
+('Faculty of Management', 'Offering courses in Human Resource Management, Entrepreneurship, and Procurement.', NOW(), NULL),
+('Faculty of Computing and Management Science', 'Programs in this faculty include Business Computing, Information Systems, and more.', NOW(), NULL),
+('Faculty of Public Administration', 'Courses include Public Administration, Governance, and Policy Making.', NOW(), NULL),
+('Faculty of Service Industry', 'This faculty focuses on Tourism, Hospitality, and Event Management.', NOW(), NULL);
 
 --
 -- Table structure for table `subcategory`
@@ -152,7 +186,7 @@ CREATE TABLE `tblcomplaints` (
   `category` int(11) DEFAULT NULL,
   `subcategory` varchar(255) DEFAULT NULL,
   `complaintType` varchar(255) DEFAULT NULL,
-  `state` varchar(255) DEFAULT NULL,
+  `department` varchar(255) DEFAULT NULL,
   `noc` varchar(255) DEFAULT NULL,
   `complaintDetails` mediumtext DEFAULT NULL,
   `complaintFile` varchar(255) DEFAULT NULL,
@@ -165,7 +199,7 @@ CREATE TABLE `tblcomplaints` (
 -- Dumping data for table `tblcomplaints`
 --
 
-INSERT INTO `tblcomplaints` (`complaintNumber`, `userId`, `category`, `subcategory`, `complaintType`, `state`, `noc`, `complaintDetails`, `complaintFile`, `regDate`, `status`, `lastUpdationDate`) VALUES
+INSERT INTO `tblcomplaints` (`complaintNumber`, `userId`, `category`, `subcategory`, `complaintType`, `department`, `noc`, `complaintDetails`, `complaintFile`, `regDate`, `status`, `lastUpdationDate`) VALUES
 (1, 3, 1, 'Online Shopping', ' Complaint', 'Punjab', 'Complain against Shopping website', 'company name xyz has not return my money after returning the item.', '', '2023-09-15 12:33:14', NULL, '2023-09-15 12:56:52'),
 (2, 4, 1, 'E-wllaet', 'General Query', 'Punjab', 'htrdy', 'dytuj', '7db575b77409a4ad74cb9620814085e8.jpg', '2023-09-15 12:41:41', NULL, NULL),
 (3, 1, 1, 'E-wllaet', 'General Query', 'Punjab', 'htrdy', 'dytuj', '7db575b77409a4ad74cb9620814085e8.jpg', '2023-09-15 12:45:26', 'closed', '2023-09-15 13:06:31'),
@@ -237,7 +271,7 @@ CREATE TABLE `users` (
   `password` varchar(255) DEFAULT NULL,
   `contactNo` bigint(11) DEFAULT NULL,
   `address` tinytext DEFAULT NULL,
-  `State` varchar(255) DEFAULT NULL,
+  `department` varchar(255) DEFAULT NULL,
   `country` varchar(255) DEFAULT NULL,
   `pincode` int(6) DEFAULT NULL,
   `userImage` varchar(255) DEFAULT NULL,
@@ -250,7 +284,7 @@ CREATE TABLE `users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `fullName`, `userEmail`, `password`, `contactNo`, `address`, `State`, `country`, `pincode`, `userImage`, `regDate`, `updationDate`, `status`) VALUES
+INSERT INTO `users` (`id`, `fullName`, `userEmail`, `password`, `contactNo`, `address`, `department`, `country`, `pincode`, `userImage`, `regDate`, `updationDate`, `status`) VALUES
 (1, 'Anuj Kumar', 'anuj.lpu1@gmail.com', 'f925916e2754e5e03f75dd58a5733251', 9999857860, 'Shakarpur', 'Uttar Pradesh', 'India', 110092, '6e8024ec26c292f258ec30f01e0392dc.png', '2017-03-28 11:44:52', '2019-06-24 10:39:44', 1),
 (2, 'test', 'test@123', '202cb962ac59075b964b07152d234b70', 7894561236, NULL, NULL, NULL, NULL, NULL, '2023-09-13 05:05:11', NULL, 1),
 (3, 'Ram', 'ram@gmail.com', '202cb962ac59075b964b07152d234b70', 1234567899, NULL, NULL, NULL, NULL, NULL, '2023-09-15 06:33:30', NULL, 1),
@@ -280,9 +314,9 @@ ALTER TABLE `complaintremark`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `state`
+-- Indexes for table `department`
 --
-ALTER TABLE `state`
+ALTER TABLE `department`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -332,9 +366,9 @@ ALTER TABLE `complaintremark`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `state`
+-- AUTO_INCREMENT for table `department`
 --
-ALTER TABLE `state`
+ALTER TABLE `department`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --

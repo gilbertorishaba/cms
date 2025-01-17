@@ -21,9 +21,6 @@
          padding: 0;
       }
 
-
-
-
       .menu-btn {
          position: fixed;
          top: 20px;
@@ -40,11 +37,6 @@
          background-color: #218838;
       }
 
-
-
-
-
-
       /* Primary Navbar Styles */
       .navbar-primary {
          background-color: #003366;
@@ -52,11 +44,6 @@
          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
          height: 50px;
          margin-bottom: 10px;
-         /* This will leave 100px of space below the nav bar */
-
-
-         /* Adjust to your preferred size */
-
       }
 
       /* Primary Navbar Styles */
@@ -77,8 +64,6 @@
          padding-bottom: 4px;
          /* Gives a feel of the underline being clicked */
       }
-
-
 
       .navbar-brand {
          display: flex;
@@ -113,12 +98,9 @@
       /* Maintain space between brand and the next section */
       .navbar-brand {
          margin-bottom: 20px;
+
          /* Adjust as needed */
       }
-
-
-
-
 
       .navbar-nav .nav-link {
          color: white;
@@ -134,93 +116,66 @@
       /* Secondary Navbar */
       .navbar-secondary {
          background-color: #003366;
-         /* Dark blue background */
          padding: 10px 0;
-         /* Padding for vertical spacing */
          height: 60px;
-         /* Slightly taller for a modern look */
          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-         /* Soft shadow for depth */
       }
 
       /* Flexbox container for alignment */
       .navbar-secondary .container {
          display: flex;
          justify-content: flex-end;
-         /* Aligns the items (nav links) to the right */
          align-items: center;
-         /* Vertically centers items */
          max-width: 1200px;
-         /* Keeps the navbar content within a reasonable width */
          margin: 0 auto;
-         /* Centers the navbar */
+
       }
 
-      /* Flex layout for nav links (change flex-direction to row) */
       .navbar-secondary .navbar-nav {
          display: flex;
-         /* Display links in a row */
          list-style: none;
-         /* Removes default list styling */
          margin: 0;
          padding: 0;
          flex-direction: row;
-         /* Ensure the nav links are horizontally arranged */
       }
 
       /* Individual nav link styles */
       .navbar-secondary .nav-item {
          margin: 0 15px;
-         /* Space between links */
       }
 
       .navbar-secondary .nav-link {
          color: #f0f0f0;
-         /* Light text color */
          font-size: 16px;
-         /* Font size for the links */
          font-weight: 500;
-         /* Slightly lighter weight for a modern look */
          text-decoration: none;
-         /* Removes underline */
          transition: all 0.3s ease;
-         /* Smooth transition for hover effect */
          padding: 5px 0;
-         /* Vertical padding */
          text-align: justify;
-         /* Vertical alignment */
+
       }
 
       .navbar-secondary .nav-link:hover {
          color: #28a745;
-         /* Green color on hover */
          border-bottom: 2px solid #28a745;
-         /* Adds a green underline on hover */
          padding-bottom: 4px;
-         /* Gives a feel of the underline being clicked */
       }
 
-      /* Optional: Responsive adjustments */
       @media (max-width: 768px) {
          .navbar-secondary .container {
             justify-content: center;
-            /* Centers the links on smaller screens */
          }
 
          .navbar-secondary .navbar-nav {
             flex-direction: column;
-            /* Stack the links vertically */
             align-items: center;
-            /* Centers links in the column */
+
          }
 
          .navbar-secondary .nav-item {
             margin: 10px 0;
-            /* Adds vertical space between links */
          }
       }
-
-
 
       .carousel-caption {
          position: absolute;
@@ -234,7 +189,6 @@
          align-items: center;
          text-align: center;
          background: rgba(0, 0, 0, 0.5);
-         /* Optional: semi-transparent background */
          transition: all 0.8s ease-in-out;
          opacity: 0;
          visibility: hidden;
@@ -261,7 +215,6 @@
       }
 
 
-
       /* Sliding Banner */
       .carousel-item img {
          height: 500px;
@@ -273,7 +226,6 @@
       /* General Footer Styles */
       .footer-widget-area {
          background-color: white;
-         /* White background */
          color: black;
          padding: 30px 0;
       }
@@ -283,21 +235,17 @@
          justify-content: space-between;
          flex-wrap: wrap;
          border-left: 2px solid red;
-         /* Red vertical line */
          border-right: 2px solid red;
-         /* Red vertical line */
       }
 
       .footer-column {
          width: 23%;
          padding: 10px;
          border-right: 2px solid red;
-         /* Red vertical line between columns */
       }
 
       .footer-column:last-child {
          border-right: none;
-         /* No right border for the last column */
       }
 
       .footer-column h4 {
@@ -316,20 +264,17 @@
 
       .footer-links a {
          color: darkblue;
-         /* Dark blue color for links */
          text-decoration: none;
          transition: color 0.3s;
       }
 
       .footer-links a:hover {
          color: #f57d00;
-         /* Hover color */
       }
 
       /* Footer Copyright */
       .footer-copyright {
          background-color: red;
-         /* Red background for secondary footer */
          color: white;
          text-align: center;
          padding: 15px 0;
@@ -365,6 +310,7 @@
       /* Section Styles */
       .section {
          padding: 60px 0;
+         /* border: 30px solid darkblue; */
       }
 
       .section h2 {
@@ -539,10 +485,8 @@
          width: 100%;
          position: fixed;
          top: -100%;
-         /* Initially hidden above the screen */
          left: 0;
          background-color: #003366;
-         /* Blue color for the menu */
          z-index: 1000;
          overflow-x: hidden;
          transition: 0.5s;
@@ -616,6 +560,177 @@
             font-size: 16px;
          }
       }
+
+      /* Video */
+      .video-container {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: center;
+         gap: 20px;
+         /* Add space between video cards */
+      }
+
+      .video-card {
+         margin-top: 50px;
+         position: relative;
+         background-color: white;
+         border-radius: 10px;
+         overflow: hidden;
+         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+         width: 900px;
+         /* Wider to resemble Harvard's standard */
+         max-width: 40%;
+         /* Ensures it stays responsive */
+         text-align: center;
+         transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      }
+
+      .video-card:hover {
+         transform: translateY(-10px);
+         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      }
+
+      .video-content {
+         width: 100%;
+         height: 506.25px;
+         /* Standard 16:9 aspect ratio for a 900px width */
+         max-height: 100%;
+         object-fit: cover;
+         border-bottom: 2px solid #0073e6;
+         /* You can use the desired color */
+      }
+
+
+
+      @media (max-width: 600px) {
+         .video-card {
+            width: 30%;
+         }
+      }
+
+      /* style for the section */
+      /* Primary Colors */
+      :root {
+         --primary-blue: #002366;
+         /* darklue */
+         --accent-green: #1a936f;
+         /* Green */
+         --highlight-red: #e63946;
+         /* Red */
+         --text-color: #333;
+         --background-color: #f9f9f9;
+      }
+
+      /* General Styling */
+      body {
+         font-family: 'Arial', sans-serif;
+         margin: 0;
+         background-color: var(--background-color);
+      }
+
+      h3 {
+         color: var(--accent-green);
+         /* Use green for headings */
+         font-size: 22px;
+         margin-bottom: 10px;
+      }
+
+      p {
+         font-size: 16px;
+         color: var(--text-color);
+         line-height: 1.6;
+      }
+
+      /* Main Container with Framing */
+      .intro-section {
+         display: grid;
+         grid-template-columns: 1fr 2fr;
+         gap: 30px;
+         padding: 50px;
+         background-color: var(--background-color);
+         border: 30px solid var(--primary-blue);
+         /* Blue border for framing */
+         border-radius: 15px;
+         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+         /* Subtle shadow */
+         margin: 20px;
+         /* Spacing around the framed section */
+      }
+
+      /* Image Container */
+      .image-container {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+      }
+
+      .image-container img {
+         width: 100%;
+         max-width: 400px;
+         height: auto;
+         border-radius: 10px;
+         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+         /* Add shadow for a modern look */
+      }
+
+      /* Content Container */
+      .content-container {
+         display: grid;
+         grid-template-columns: 1fr 1fr;
+         gap: 20px;
+         padding-left: 20px;
+      }
+
+      /* Add border between the two columns */
+      .content-container>div:first-child {
+         border-right: 2px solid rgba(0, 0, 0, 0.1);
+         /* Add border after the first column */
+         padding-right: 20px;
+      }
+
+      /* Hover effect for links or interactive elements */
+      .content-container h3:hover {
+         color: var(--highlight-red);
+         /* On hover, the text turns red */
+      }
+
+      /* Modern Button for Call-to-Action */
+      .cta-button {
+         background-color: var(--primary-blue);
+         color: white;
+         border: none;
+         padding: 10px 20px;
+         font-size: 16px;
+         border-radius: 5px;
+         margin-top: 20px;
+         cursor: pointer;
+         transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .cta-button:hover {
+         background-color: var(--accent-green);
+         /* Button changes to green on hover */
+         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+         /* Elevation effect on hover */
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+         .intro-section {
+            grid-template-columns: 1fr;
+            padding: 20px;
+         }
+
+         .content-container {
+            grid-template-columns: 1fr;
+         }
+
+         .content-container>div:first-child {
+            border-right: none;
+            /* Remove the dividing line on mobile */
+            padding-right: 0;
+         }
+      }
    </style>
 </head>
 
@@ -651,38 +766,35 @@
                <!-- The Sliding Menu -->
                <div id="slidingMenu" class="sliding-menu">
                   <div class="menu-content">
-                     <h2>Complaint Management System</h2>
+                     <a class="navbar-brand" href="#">
+                        <img src="images/mubs.jpg" alt="MUBS CMS">
+                        MUBS Complaint Management System
+                     </a>
+
+                     <!-- <h2>MUBS Complaint Management System</h2> -->
                      <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">FAQs</a></li>
-                        <li><a href="#">Contact</a></li>
-                        <li><a href="#">Support</a></li>
-                        <!-- Add more menu items here -->
+                        <li><a href="admin/index.php">Admin</a></li>
+                        <li><a href="user/index.php">User Registration</a></li>
+                        <li><a href="user/registration.php">User Login</a></li>
+                        <!-- <li><a href="admin/index.php">Contact</a></li> -->
+
                      </ul>
                      <div class="info">
                         <h3>Information Section</h3>
-                        <p>Here you can display relevant information about your complaint management system...</p>
+                        <p>Designed to handle the complaints from all stakeholders within MUBS as an Institution</p>
                      </div>
                   </div>
                </div>
-
-
             </ul>
          </div>
       </div>
    </nav>
-
-
-   <!-- <div class="logo-description">
-      <img src="images/mubs.jpg" alt="MUBS Complaint Managemement System" class="logo">
-      <p class="description">MUBS Complaint Managemement System</p>
-   </div> -->
    <div>
       <a class="navbar-brand" href="#">
          <img src="images/mubs.jpg" alt="MUBS CMS">
          MUBS Complaint Management System
       </a>
+
    </div>
 
    <!-- Secondary Navigation Bar -->
@@ -702,32 +814,7 @@
       </div>
    </nav>
 
-   <!-- <nav class="navbar navbar-primary navbar-expand-lg">
-      <div class="container">
-         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#primaryNavbar" aria-controls="primaryNavbar" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-         </button>
-         <div class="collapse navbar-collapse" id="primaryNavbar">
-            <ul class="navbar-nav ml-auto">
-               <li class="nav-item">
-                  <a class="nav-link" href="index.php">Home</a>
-               </li>
-               <li class="nav-item">
-                  <a class="nav-link" href="admin/index.php">Admin</a>
-               </li>
-               <li class="nav-item">
-                  <a class="nav-link" href="user/index.php">User Login</a>
-               </li>
-               <li class="nav-item">
-                  <a class="nav-link" href="user/registration.php">User Registration</a>
-               </li>
-            </ul>
-         </div>
-      </div>
-   </nav>
-
-
-   <! Sliding Banner -->
+   <!-- Sliding Banner  -->
    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel" data-interval="4000">
       <ol class="carousel-indicators">
          <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
@@ -736,21 +823,21 @@
       </ol>
       <div class="carousel-inner">
          <div class="carousel-item active">
-            <img src="images/img-12.png" class="d-block w-100" alt="First Slide">
+            <img src="images/mubs1.jpg" class="d-block w-100" alt="First Slide">
             <div class="carousel-caption">
                <h5>Welcome to MUBS CMS</h5>
                <p>Streamlined Complaint Management System</p>
             </div>
          </div>
          <div class="carousel-item">
-            <img src="images/img-12.png" class="d-block w-100" alt="Second Slide">
+            <img src="images/std2.jpg" class="d-block w-100" alt="Second Slide">
             <div class="carousel-caption">
-               <h5>Empowering Education</h5>
+               <h5>Empowering Education through</h5>
                <p>Promoting effective communication and resolutions</p>
             </div>
          </div>
          <div class="carousel-item">
-            <img src="images/img-12.png" class="d-block w-100" alt="Third Slide">
+            <img src="images/std2.jpg" class="d-block w-100" alt="Third Slide">
             <div class="carousel-caption">
                <h5>Your Voice Matters</h5>
                <p>Quick and efficient issue resolution at your fingertips</p>
@@ -767,10 +854,24 @@
       </a>
    </div>
 
+
+   <div class="video-container">
+
+      <!-- Video Card 3 -->
+      <div class="video-card">
+         <video autoplay loop muted playsinline class="video-content">
+            <source src="videos/mubs1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+         </video>
+      </div>
+   </div>
+
+
+
    <!-- Main Content Section -->
    <section class="section img-text-section">
       <div class="container">
-         <h2>About MUBS CMS</h2>
+         <h2>About MUBS Complaint Mangement System</h2>
          <div class="row">
             <div class="col-md-6 text-column">
                <h3>Effective Communication</h3>
@@ -809,6 +910,35 @@
             <div class="col-md-6">
                <img src="images/img-12.png" alt="MUBS Image">
             </div>
+         </div>
+      </div>
+   </section>
+
+   <!-- code for the modern section -->
+   <section class="intro-section">
+      <!-- Image container on the left -->
+      <div class="image-container">
+         <img src="images/mubs.jpg" alt="MUBS Complaint Management System">
+      </div>
+
+      <!-- Two-column content on the right, separated by a faded line -->
+      <div class="content-container">
+         <!-- Column 1 -->
+         <div>
+            <h3>What is MUBS Complaint Management System?</h3>
+            <p>The MUBS Complaint Management System allows students, faculty, and staff to submit concerns and issues they face within the university. The system ensures transparency and accountability in handling complaints.</p>
+
+            <h3>How to Submit a Complaint</h3>
+            <p>Simply log into your account, navigate to the 'Submit Complaint' section, and provide details of your issue. You will receive a confirmation and can track your complaint's progress at any time.</p>
+         </div>
+
+         <!-- Column 2 -->
+         <div>
+            <h3>Track Your Complaint</h3>
+            <p>After submitting your complaint, you can check its status by logging into your account. The system provides regular updates on the resolution process.</p>
+
+            <h3>System Benefits</h3>
+            <p>The system promotes accountability by ensuring that every complaint is addressed. It helps improve communication between students, faculty, and administration, fostering a more positive environment at MUBS.</p>
          </div>
       </div>
    </section>
@@ -820,26 +950,26 @@
          <div class="testimonial-card">
             <img src="images/img-12.png" alt="User 1" class="testimonial-img">
             <p class="testimonial-text">"This system has revolutionized how I manage my learning. The interface is intuitive and easy to use. Highly recommend!"</p>
-            <h5 class="user-name">John Doe</h5>
+            <h5 class="user-name">Gilbert Orishaba</h5>
             <p class="user-role">Student</p>
          </div>
          <div class="testimonial-card">
             <img src="images/img-12.png" alt="User 2" class="testimonial-img">
             <p class="testimonial-text">"The best learning experience I’ve ever had. The platform is seamless and user-friendly. Great job!"</p>
-            <h5 class="user-name">Jane Smith</h5>
-            <p class="user-role">Professor</p>
+            <h5 class="user-name">Muteebi Bashir</h5>
+            <p class="user-role">Lecturer</p>
          </div>
          <div class="testimonial-card">
             <img src="images/img-12.png" alt="User 3" class="testimonial-img">
             <p class="testimonial-text">"I love how I can track my progress. This is definitely the future of education!"</p>
-            <h5 class="user-name">Michael Brown</h5>
-            <p class="user-role">Administrator</p>
+            <h5 class="user-name">Makwi Desmond</h5>
+            <p class="user-role">Student</p>
          </div>
          <div class="testimonial-card">
             <img src="images/img-12.png" alt="User 3" class="testimonial-img">
             <p class="testimonial-text">"I love how I can track my progress. This is definitely the future of education!"</p>
-            <h5 class="user-name">Michael Brown</h5>
-            <p class="user-role">Administrator</p>
+            <h5 class="user-name">Arikiriza Davis</h5>
+            <p class="user-role">Student</p>
          </div>
          <div class="testimonial-card">
             <img src="images/img-12.png" alt="User 3" class="testimonial-img">
@@ -867,10 +997,6 @@
          </div>
       </div>
    </section>
-
-
-
-
 
    <!-- Footer -->
    <footer class="footer-widget-area">
@@ -996,6 +1122,19 @@
                slidingMenu.style.top = "0"; // Slide down to the top
                slidingMenu.style.height = "100%"; // Full height
             }
+         });
+      });
+
+      // video
+      const videoCards = document.querySelectorAll('.video-card video');
+
+      videoCards.forEach(video => {
+         video.addEventListener('mouseenter', () => {
+            video.play();
+         });
+
+         video.addEventListener('mouseleave', () => {
+            video.pause();
          });
       });
    </script>
