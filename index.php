@@ -58,11 +58,9 @@
 
       .navbar-primary .navbar-nav .nav-link:hover {
          color: #28a745;
-         /* Green color on hover */
          border-bottom: 2px solid #28a745;
-         /* Adds a green underline on hover */
          padding-bottom: 4px;
-         /* Gives a feel of the underline being clicked */
+
       }
 
       .navbar-brand {
@@ -731,10 +729,72 @@
             padding-right: 0;
          }
       }
+
+      /* search bar */
+
+      /* Search Bar Styling */
+      .search-bar {
+         position: relative;
+         margin-left: 20px;
+         display: flex;
+         align-items: center;
+      }
+
+      .search-bar input {
+         border-radius: 20px;
+         padding: 5px 20px;
+         border: 1px solid #ddd;
+         width: 200px;
+         transition: all 0.3s ease;
+      }
+
+      .search-bar input:focus {
+         width: 300px;
+         outline: none;
+         border-color: #007bff;
+      }
+
+      .search-bar button {
+         margin-left: 10px;
+         border-radius: 20px;
+         padding: 5px 20px;
+      }
+
+      /* Search Bar Styling Floated Right */
+      .search-bar {
+         position: relative;
+         display: flex;
+         align-items: center;
+         float: right;
+         /* Float to the right */
+      }
+
+      .search-bar input {
+         border-radius: 20px;
+         padding: 5px 20px;
+         border: 1px solid #ddd;
+         width: 200px;
+         transition: all 0.3s ease;
+      }
+
+      .search-bar input:focus {
+         width: 300px;
+         outline: none;
+         border-color: #007bff;
+      }
+
+      .search-bar button {
+         margin-left: 10px;
+         border-radius: 20px;
+         padding: 5px 20px;
+      }
    </style>
 </head>
 
 <body>
+
+
+
 
    <!-- Primary Navigation Bar -->
    <nav class="navbar navbar-primary navbar-expand-lg">
@@ -770,6 +830,12 @@
                         <img src="images/mubs.jpg" alt="MUBS CMS">
                         MUBS Complaint Management System
                      </a>
+                     <!-- search bar -->
+                     <!-- Search Bar in the Navbar -->
+                     <li class="nav-item search-bar">
+                        <input type="text" id="searchInput" class="form-control" placeholder="Search..." onkeyup="handleSearch(event)">
+                        <button class="btn btn-primary" id="searchBtn" onclick="performSearch()">Search</button>
+                     </li>
 
                      <!-- <h2>MUBS Complaint Management System</h2> -->
                      <ul>
@@ -795,7 +861,14 @@
          MUBS Complaint Management System
       </a>
 
+
    </div>
+   <!-- search bar -->
+   <!-- Search Bar in the Navbar -->
+   <!-- <li class="nav-item search-bar">
+      <input type="text" id="searchInput" class="form-control" placeholder="Search..." onkeyup="handleSearch(event)">
+      <button class="btn btn-primary" id="searchBtn" onclick="performSearch()">Search</button>
+   </li> -->
 
    <!-- Secondary Navigation Bar -->
    <nav class="navbar navbar-secondary">
@@ -813,6 +886,11 @@
          </ul>
       </div>
    </nav>
+
+
+
+
+
 
    <!-- Sliding Banner  -->
    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel" data-interval="4000">
@@ -1137,6 +1215,27 @@
             video.pause();
          });
       });
+
+      // search bar javascript
+      // Function to handle search when the user presses 'Enter'
+      // function handleSearch(event) {
+      //    if (event.key === "Enter") {
+      //       performSearch();
+      //    }
+      // }
+
+      // // Function to perform search action
+      // function performSearch() {
+      //    const query = document.getElementById("searchInput").value.trim();
+      //    if (query) {
+      //       // This is a placeholder alert. Replace with your own logic.
+      //       alert("You searched for: " + query);
+      //       // Example: Redirect to a search results page (uncomment and update the URL as needed)
+      //       // window.location.href = "search-results.php?q=" + encodeURIComponent(query);
+      //    } else {
+      //       alert("Please enter a search term!");
+      //    }
+      // }
    </script>
    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
